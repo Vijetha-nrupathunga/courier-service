@@ -1,0 +1,28 @@
+{% include "h1.html" %}
+
+{% block content %}
+  <body>
+        <form action=""method="POST">
+            {% for i in available %}
+                <div >
+                        <br><br><br>
+               Sender:{{ i.uname }}<br>
+               Reciever :{{ i.s_name.name}} <br>
+               From: {{ i.fromplace }}<br>
+               To :{{ i.toplace }}<br>
+               Time :{{ i.oTime }}<br>
+             
+               Charge :{{ i.charge }}<br>
+               Status:{{i.status}}<br>
+               Accept:<a href="/accept/{{i.id}}/"><input type="accept" value="Submit" name="accept"> </a>
+               <br><br>
+               Reject:<a href="/reject/{{i.id}}/"><input type="accept" value="Submit"name="reject" > </a>
+            {% endfor %}
+            {% csrf_token %}{{ form.as_table }}
+            
+        </form>
+            
+            
+      
+  </body>
+  {% endblock content %}

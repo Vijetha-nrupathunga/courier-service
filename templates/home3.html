@@ -1,0 +1,21 @@
+{% include "h1.html" %}
+
+{% block content %}
+  <body>
+        <form action=""method="POST">
+                <br>
+            <h2 align=center>Enter vehicle information</h2><br><br><br>
+            <div class="cont">
+            {% csrf_token %}
+            Vehicle No :{{ form.vno}}<br>
+            From:{{ form.fromplace }}<br>
+            To:{{ form.toplace }}<br><br>
+            Time:<br>{{ form.vTime }}<br><br><br>
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+            
+            
+      
+  </body>
+  {% endblock content %}

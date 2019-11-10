@@ -1,0 +1,24 @@
+{% include "h1.html"%}
+{% block content %}
+<body>
+<h1 align="center">{{value}}</h1>
+    <div class="cont">
+        <form  method="POST" class ="mt-4">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="create" class="btn btn-info">
+        </form>
+        {% if messages %}
+        {% for message in messages %}
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+{% endfor %}
+{% endif %}
+    </div>
+
+    </body>
+    {% endblock content %}

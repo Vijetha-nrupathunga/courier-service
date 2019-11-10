@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+  </head>
+  <body>
+        {{% for x in b %}}
+            {{ x.id }}
+        {{% endfor %}}
+        <form action=""method="POST">
+                {% csrf_token %}{{ form.n }}
+                <input type="submit" value="Submit">
+            </form>
+        {% if b.numberv is None %}
+            vehicle available
+        {% else %}  
+            no vehicle available 
+        {% endif %}  
+    
+            
+            
+      
+  </body>
+  </html>

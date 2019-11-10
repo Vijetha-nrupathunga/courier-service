@@ -1,0 +1,24 @@
+{% include "h1.html" %}
+
+{% block content %}
+  <body>
+        <form action=""method="POST">
+            <h1>SELECT VECHICLE ID FROM BELOW</h1>
+            {% for i in available %}
+                <div >
+                        <br><br><br>
+               <!---Name:{{ i.v_name.mname }}<br>
+               Email:{{ i.v_name.mEmail }}<br>
+               Contact:{{ i.v_name.mcont }}<br>-->
+               Id:{{ i.id}} <br>
+              
+               
+            {% endfor %}
+            {% csrf_token %}{{ form.as_table }}
+            <input type="submit" value="Submit">
+        </form>
+            
+            
+      
+  </body>
+  {% endblock content %}

@@ -1,0 +1,22 @@
+{% include "h1.html" %}
+
+{% block content %}
+  <body>
+        <form action=""method="POST">
+                <br>
+            <h2 align=center>Courier Information</h2><br><br><br>
+            <div class="cont">
+            {% csrf_token %}
+            <!--{{ form.as_p }}-->
+            From:<br>{{ form.fromplace }}<br>
+            To:<br>{{ form.toplace }}<br>
+            Reciever Email:<br>{{ form.oEmail }}<br>
+            Weight:<br>{{ form.weight }}<br>
+            Time:<br>{{ form.oTime }}<br><br><br>
+            <input type="submit" value="Submit"></div>
+        </form>
+            
+            
+      
+  </body>
+  {% endblock content %}
