@@ -86,7 +86,7 @@ def signup(request):
                 #pat.otpg=otpg
                 URL = 'https://www.way2sms.com/api/v1/sendCampaign'
                 print(URL)
-                response = sendPostRequest(URL, 'VJPVF50BPMHFJN1HF4IA9CB3I5JURR05','E771DHCO9PKVB7Y5', 'stage', str(pat.cont), 'active-sender-id', 'your one time password is'+str(pat.otpu)+"dont share it" )
+                response = sendPostRequest(URL, 'your api key here','your secret key here', 'stage', str(pat.cont), 'active-sender-id', 'your one time password is'+str(pat.otpu)+"dont share it" )
                 name=request.session['name']=pat.name
                 #otpg=request.session['otpg']=pat.otpg
                 #return redirect('/otp/'+name+'/'+str(otpg))
